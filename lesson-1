@@ -1,0 +1,55 @@
+#1 задание
+a = 10
+b = 20
+c = a + b
+number = int(input('Введите положительное число: '))
+name = input('Как тебя зовут?: ')
+print('%5d, %5d, %5s' % (c, number, name))
+#2 задание
+time = int(input('За сколько секунд пробежишь марафон?: '))
+hours = time / 3600
+minutes = (time - hours * 3600) / 60
+seconds = time - (hours * 3600 + minutes * 60)
+print(f"время в формате чч:мм:сс   {hours} : {minutes} : {seconds}")
+#3 задание
+n = int (input('Введите положительное число: '))
+nn = 10 * n + n
+print (nn)
+nnn = int (100 * n + nn)
+print (nnn)
+all_n = n + nn + nnn
+print (all_n)
+#4 задание
+number = abs(int(input('Введите положительное число: ')))
+max = number % 10
+while number >= 1:
+    number = number // 10
+    if number % 10 > max:
+        max = number % 10
+    if number > 9:
+        continue
+    else:
+        print('Максиммальная цифра в числе ', max)
+        break
+#5 задание
+revenue = float(input('Введите значение выручки фирмы: '))
+cost = float(input('Введите значение издержки фирмы: '))
+profit = revenue - cost
+print(' ', profit)
+if revenue > cost:
+    print('вы работаете правильно, с прибылью')
+    print('рентабельность выручки - %5s' % (profit / revenue))
+    staff = int(input('Сколько человек трудится на фирме?: '))
+    print(f'прибыль в расчете на 1 сотрудника составила: {profit / staff:.2f}')
+else:
+    print('необходимо работать усерднее, вы работаете в убыток')
+#6 задание
+a = int(input('Введите результат первой пробежки в км: '))
+b = int(input('Введите желаемый результат пробежки в км: '))
+days = 1
+km = a
+while b > km:
+    a = a + 0.1 * a
+    days += 1
+    km = km + a
+print(f'вы достигли результата на %.d день!' % days)
